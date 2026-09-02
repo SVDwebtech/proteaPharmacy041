@@ -177,7 +177,8 @@ body {
   }
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -818,7 +819,8 @@ body {
   margin-bottom: 1rem;
   width: 100%;
 }
-.contactForm__field input, .contactForm__field textarea {
+.contactForm__field input,
+.contactForm__field textarea {
   border-radius: 0.35rem;
   border: 2px solid #6CB347;
   padding: 0.5rem;
@@ -932,14 +934,14 @@ body {
   transform: translateX(-50%);
   z-index: -100;
 }
-@media (min-width: 600px) {
-  .headingH2Container__headingH2--about::after {
-    left: 8rem;
-  }
-}
 @media (min-width: 400px) {
   .headingH2Container__headingH2--about::after {
     top: -80%;
+  }
+}
+@media (min-width: 600px) {
+  .headingH2Container__headingH2--about::after {
+    left: 8rem;
   }
 }
 .headingH2Container__headingH2--dispensary::after {
@@ -956,14 +958,14 @@ body {
   transform: translateX(-50%);
   z-index: -100;
 }
-@media (min-width: 600px) {
-  .headingH2Container__headingH2--dispensary::after {
-    left: 8rem;
-  }
-}
 @media (min-width: 420px) {
   .headingH2Container__headingH2--dispensary::after {
     top: -90%;
+  }
+}
+@media (min-width: 600px) {
+  .headingH2Container__headingH2--dispensary::after {
+    left: 8rem;
   }
 }
 .headingH2Container__headingH2--clinic::after {
@@ -980,14 +982,14 @@ body {
   transform: translateX(-50%);
   z-index: -100;
 }
-@media (min-width: 600px) {
-  .headingH2Container__headingH2--clinic::after {
-    left: 8rem;
-  }
-}
 @media (min-width: 420px) {
   .headingH2Container__headingH2--clinic::after {
     top: -90%;
+  }
+}
+@media (min-width: 600px) {
+  .headingH2Container__headingH2--clinic::after {
+    left: 8rem;
   }
 }
 .headingH2Container__headingH2--info::after {
@@ -1004,14 +1006,14 @@ body {
   transform: translateX(-50%);
   z-index: -100;
 }
-@media (min-width: 600px) {
-  .headingH2Container__headingH2--info::after {
-    left: 8rem;
-  }
-}
 @media (min-width: 420px) {
   .headingH2Container__headingH2--info::after {
     top: -90%;
+  }
+}
+@media (min-width: 600px) {
+  .headingH2Container__headingH2--info::after {
+    left: 8rem;
   }
 }
 .headingH2Container__headingH2--contact::after {
@@ -1028,14 +1030,14 @@ body {
   transform: translateX(-50%);
   z-index: -100;
 }
-@media (min-width: 600px) {
-  .headingH2Container__headingH2--contact::after {
-    left: 8rem;
-  }
-}
 @media (min-width: 420px) {
   .headingH2Container__headingH2--contact::after {
     top: -90%;
+  }
+}
+@media (min-width: 600px) {
+  .headingH2Container__headingH2--contact::after {
+    left: 8rem;
   }
 }
 
@@ -1062,6 +1064,7 @@ body {
     justify-content: flex-start;
   }
 }
+
 .heroSection {
   display: flex;
   flex-direction: column;
@@ -1426,6 +1429,18 @@ body {
   display: flex;
 }
 
+.openAndCloseIcons {
+  display: inline-block;
+  margin-left: 1.2rem;
+}
+.openAndCloseIcons__icon {
+  width: 3rem;
+  height: 3rem;
+}
+.openAndCloseIcons__icon--displayNone {
+  display: none;
+}
+
 .pharmacyDepartment {
   display: flex;
   flex-direction: column;
@@ -1439,446 +1454,12 @@ body {
   background: linear-gradient(to right, transparent, rgba(108, 179, 71, 0.4) 15%, #6cb347 40%, #3E6629, #6cb347 60%, rgba(108, 179, 71, 0.4) 85%, transparent);
 }
 
-.photoCollageContainer {
-  margin: 2rem auto 4rem;
-}
-
-.photoCollage {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 125vw) repeat(6, 65vw);
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  margin: 0 auto;
-}
-@media (min-width: 350px) {
-  .photoCollage {
-    grid-template-columns: repeat(6, 3.5rem);
-    grid-template-rows: repeat(2, 43.75rem) repeat(6, 22.5rem);
-    width: min(100%, 35rem);
-    margin: 0 auto;
-  }
-}
-@media (min-width: 37.5em) {
-  .photoCollage {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 60vw) repeat(4, 35vw);
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 56.25em) {
-  .photoCollage {
-    grid-template-columns: repeat(6, clamp(12rem, 13.2vw, 16rem));
-    grid-template-rows: repeat(4, clamp(18rem, 22vw, 22rem));
-    width: min(100%, 90rem);
-    margin: 0 auto 0 0;
-  }
-}
-@media (min-width: 75em) {
-  .photoCollage {
-    grid-template-columns: repeat(7, clamp(11rem, 11.25vw, 15rem));
-    grid-template-rows: repeat(3, clamp(14rem, 14vw, 18rem));
-    width: 100%;
-    margin: 0 auto 0 0;
-  }
-}
-.photoCollage__cardPhotoContainer {
-  perspective: 1200px;
-}
-.photoCollage__cardPhotoContainer--container1 {
-  grid-column: 1/-1;
-  grid-row: 1/span 1;
-}
-.photoCollage__cardPhotoContainer--container2 {
-  grid-column: 1/-1;
-  grid-row: 2/span 1;
-}
-.photoCollage__cardPhotoContainer--container3 {
-  grid-column: 1/span 3;
-  grid-row: 3/span 1;
-}
-.photoCollage__cardPhotoContainer--container4 {
-  grid-column: 4/span 3;
-  grid-row: 3/span 1;
-}
-.photoCollage__cardPhotoContainer--container5 {
-  grid-column: 1/span 3;
-  grid-row: 4/span 1;
-}
-.photoCollage__cardPhotoContainer--container6 {
-  grid-column: 4/span 3;
-  grid-row: 4/span 1;
-}
-.photoCollage__cardPhotoContainer--container7 {
-  grid-column: 1/span 3;
-  grid-row: 5/span 1;
-}
-.photoCollage__cardPhotoContainer--container8 {
-  grid-column: 4/span 3;
-  grid-row: 5/span 1;
-}
-.photoCollage__cardPhotoContainer--container9 {
-  grid-column: 1/span 3;
-  grid-row: 6/span 1;
-}
-.photoCollage__cardPhotoContainer--container10 {
-  grid-column: 4/span 3;
-  grid-row: 5/span 1;
-}
-.photoCollage__cardPhotoContainer--container11 {
-  grid-column: 1/span 3;
-  grid-row: 6/span 1;
-}
-.photoCollage__cardPhotoContainer--container12 {
-  grid-column: 4/span 3;
-  grid-row: 6/span 1;
-}
-.photoCollage__cardPhotoContainer--container13 {
-  grid-column: 1/span 3;
-  grid-row: 7/span 1;
-}
-.photoCollage__cardPhotoContainer--container14 {
-  grid-column: 4/span 3;
-  grid-row: 7/span 1;
-}
-.photoCollage__cardPhotoContainer--container15 {
-  grid-column: 1/span 3;
-  grid-row: 8/span 1;
-}
-@media (min-width: 37.5em) {
-  .photoCollage__cardPhotoContainer--container1 {
-    grid-column: 1/span 3;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container2 {
-    grid-column: 4/span 3;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container3 {
-    grid-column: 1/span 2;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container4 {
-    grid-column: 3/span 2;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container5 {
-    grid-column: 5/span 2;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container6 {
-    grid-column: 1/span 2;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container7 {
-    grid-column: 3/span 2;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container8 {
-    grid-column: 5/span 2;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container9 {
-    grid-column: 1/span 2;
-    grid-row: 4/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container10 {
-    grid-column: 5/span 2;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container11 {
-    grid-column: 1/span 2;
-    grid-row: 4/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container12 {
-    grid-column: 3/span 2;
-    grid-row: 4/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container13 {
-    grid-column: 5/span 2;
-    grid-row: 4/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container14 {
-    grid-column: 1/span 2;
-    grid-row: 5/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container15 {
-    grid-column: 3/span 2;
-    grid-row: 5/span 1;
-  }
-}
-@media (min-width: 56.25em) {
-  .photoCollage__cardPhotoContainer--container1 {
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
-  }
-  .photoCollage__cardPhotoContainer--container2 {
-    grid-column: 3/span 2;
-    grid-row: 1/span 2;
-  }
-  .photoCollage__cardPhotoContainer--container3 {
-    grid-column: 5/span 1;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container4 {
-    grid-column: 6/span 1;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container5 {
-    grid-column: 5/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container6 {
-    grid-column: 6/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container7 {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container8 {
-    grid-column: 2/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container9 {
-    grid-column: 3/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container10 {
-    grid-column: 2/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container11 {
-    grid-column: 3/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container12 {
-    grid-column: 4/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container13 {
-    grid-column: 5/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container14 {
-    grid-column: 6/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container15 {
-    grid-column: 1/span 1;
-    grid-row: 4/span 1;
-  }
-}
-@media (min-width: 75em) {
-  .photoCollage__cardPhotoContainer--container1 {
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
-  }
-  .photoCollage__cardPhotoContainer--container2 {
-    grid-column: 3/span 2;
-    grid-row: 1/span 2;
-  }
-  .photoCollage__cardPhotoContainer--container3 {
-    grid-column: 5/span 1;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container4 {
-    grid-column: 6/span 1;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container5 {
-    grid-column: 7/span 1;
-    grid-row: 1/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container6 {
-    grid-column: 5/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container7 {
-    grid-column: 6/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container8 {
-    grid-column: 7/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container9 {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container10 {
-    grid-column: 7/span 1;
-    grid-row: 2/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container11 {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container12 {
-    grid-column: 2/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container13 {
-    grid-column: 3/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container14 {
-    grid-column: 4/span 1;
-    grid-row: 3/span 1;
-  }
-  .photoCollage__cardPhotoContainer--container15 {
-    grid-column: 5/span 1;
-    grid-row: 3/span 1;
-  }
-}
-.photoCollage__cardPhoto {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: all 0.6s ease;
-  transform-style: preserve-3d;
-}
-.photoCollage__cardPhotoFront, .photoCollage__cardPhotoBack {
-  border-radius: 5px;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-}
-.photoCollage__cardPhotoFront {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  padding: 0.75rem;
-}
-.photoCollage__cardPhotoBack {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.45rem;
-  background-image: linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-  padding: 1rem;
-}
-.photoCollage__cardPhotoBackFirstAndSecond {
-  justify-content: flex-start;
-  gap: 2rem;
-}
-.photoCollage .rotateCard {
-  transform: rotateY(180deg);
-}
-.photoCollage__cardPhotoBack {
-  transform: rotateY(180deg);
-}
-.photoCollage__cardPhotoBtn {
-  order: 1;
-}
-.photoCollage__cardPhotoBtn::after {
-  content: "";
-  background-color: #f0f0f0;
-  height: 1px;
-  width: 99%;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  z-index: -100;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0s;
-}
-.photoCollage__cardPhoto:hover .photoCollage__cardPhotoBtn::after {
-  transform: scaleX(1);
-  transition: 0.4s ease-in;
-}
-.photoCollage__cardPhoto:hover {
-  animation: animateNavLink 0.4s ease-in 1 forwards;
-}
-.photoCollage__cardPhotoFront--photo1 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyPieterJones11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo2 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyCornellLaurens04July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo3 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyPharmacistNinaBriel26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo4 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyAnzelleBritz26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo5 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyCorneOlivier26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo6 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyJoleneRautenbach16Aug2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo7 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyRinaPotgieter11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo8 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyLudwigKieck11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo9 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyStephnieEngelbrecht11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo10 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacySindyFourie11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo11 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyMarlyneSethole26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo12 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyPietMogale26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo13 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyJohannaMoshokwa11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo14 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacyAfrikaMaluleke11July2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoFront--photo15 {
-  background-image: linear-gradient(0deg, rgba(30, 32, 32, 0.75) 8%, rgba(30, 32, 32, 0.45) 25%, transparent 50%), url("../img/staff/ProteaPharmacySammyMogale26June2023.webp"), linear-gradient(135deg, #012e4c 35%, rgba(1, 46, 76, 0.85) 55%, rgba(1, 46, 76, 0.65) 75%, rgba(1, 46, 76, 0.45) 85%, rgba(240, 240, 240, 0.25));
-}
-.photoCollage__cardPhotoIcon {
-  height: clamp(1rem + 0.8vw, 1.3vh, 2.4rem + 1vw);
-  width: clamp(1rem + 0.8vw, 1.3vh, 2.4rem + 1vw);
-}
-.photoCollage__cardPhotoBackIcon {
-  height: 1.8rem;
-  width: 1.8rem;
-}
-
-.displayNone {
-  display: none;
-}
-
 .promotionContainer {
   min-height: 45rem;
 }
 .promotionContainer a {
   width: min(100%, 450px);
   margin: 0 auto;
-}
-
-.openAndCloseIcons {
-  display: inline-block;
-  margin-left: 1.2rem;
-}
-.openAndCloseIcons__icon {
-  width: 3rem;
-  height: 3rem;
-}
-.openAndCloseIcons__icon--displayNone {
-  display: none;
 }
 
 .socialMedia {
@@ -1892,27 +1473,6 @@ body {
   height: clamp(3.5rem, 11vw, 9rem);
 }
 
-.teamMember {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-}
-.teamMember__img {
-  background: linear-gradient(135deg, #f0f0f0 5%, #6CB347 35%, #3E6629 65%);
-  border: 2px solid #f0f0f0;
-  border-radius: 100%;
-  box-shadow: 0 0 6px 1px rgba(1, 46, 76, 0.6);
-  width: 6rem;
-}
-.teamMember__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-}
 .techStack {
   display: flex;
   flex-wrap: wrap;
@@ -2005,6 +1565,7 @@ body {
     padding: 2rem 4rem 0;
   }
 }
+
 .promotionSection {
   display: flex;
   flex-direction: column;
