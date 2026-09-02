@@ -1,802 +1,790 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 5rem;
+	gap: 5rem;
 
-    padding: 2rem 1rem 0;
+	padding: 2rem 1rem 0;
 
-    // tablet portrait
-    @media (min-width: 600px) {
-        padding: 2rem 4rem 0;
-    }
-    
-    &__aboutSection {
-    }
+	// tablet portrait
+	@media (min-width: 600px) {
+		padding: 2rem 4rem 0;
+	}
 }
 
 .promotionSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    &__promotionTextAndFlipbookContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+	&__promotionTextAndFlipbookContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-        gap: 2rem;
-        
-        @include respond(tab-land) {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: stretch;
+		gap: 2rem;
 
-            gap: 4rem;
-        }
-    }
+		@include respond(tab-land) {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: stretch;
 
-    &__paragraph {
-        margin: 3rem 0 3rem;
+			gap: 4rem;
+		}
+	}
 
-        @include respond(tab-land) {
-            flex: 0 0 30%;
-        }
-    } 
+	&__paragraph {
+		margin: 3rem 0 3rem;
 
-    &__promotionContainer {
-        margin-bottom: 3rem;
+		@include respond(tab-land) {
+			flex: 0 0 30%;
+		}
+	}
 
-        @media (min-width: 500px) {
-            margin: 0 auto 3rem;
-            max-width: min(80%, 650px);
-        }
+	&__promotionContainer {
+		margin-bottom: 3rem;
 
-        @include respond(tab-land) {
-            max-width: 500px;
-            margin: 3rem auto 0 0;
-        }
-    }
+		@media (min-width: 500px) {
+			margin: 0 auto 3rem;
+			max-width: min(80%, 650px);
+		}
+
+		@include respond(tab-land) {
+			max-width: 500px;
+			margin: 3rem auto 0 0;
+		}
+	}
 }
 
 .aboutSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 3rem;
+	gap: 3rem;
 
-    &__ourBusAndOurTeamContainer {
+	&__ourBusAndOurTeamContainer {
+		& > :first-child {
+			margin-bottom: 2rem;
+		}
 
-        & > :first-child {
-            margin-bottom: 2rem;
-        }
+		@include respond(tab-land) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
 
-        @include respond(tab-land) {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
+	&__ourBusiness {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-    &__ourBusiness {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+		gap: 1.25rem;
 
-        gap: 1.25rem;
+		margin: 0 auto;
+		max-width: 45rem;
 
-        margin: 0 auto;
-        max-width: 45rem;
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
+		@include respond(tab-land) {
+			min-width: 47%;
+			max-width: 47%;
+			margin: 0;
+		}
+	}
 
-        @include respond(tab-land) {
-            min-width: 47%;
-            max-width: 47%;
-            margin: 0;
-        }
-    }
+	&__ourTeam {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-    &__ourTeam {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+		gap: 2rem;
 
-        gap: 2rem;
+		margin: 0 auto;
+		max-width: 45rem;
 
-        margin: 0 auto;
-        max-width: 45rem;
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
-
-        @include respond(tab-land) {
-            min-width: 47%;
-            max-width: 47%;
-            margin: 0;
-        }
-    }
+		@include respond(tab-land) {
+			min-width: 47%;
+			max-width: 47%;
+			margin: 0;
+		}
+	}
 }
 
 .dispensarySection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 3rem;
+	gap: 3rem;
 
-    &__dispAndCounterMedsContainer {
-        @include respond(tab-land) {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
+	&__dispAndCounterMedsContainer {
+		@include respond(tab-land) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
 
-    article {
-        max-width: 45rem;
-        margin: 0 auto;
+	article {
+		max-width: 45rem;
+		margin: 0 auto;
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        @include respond(tab-land) {
-            min-width: 47%;
-            max-width: 47%;
-            margin: 0;
-        }
-    }
+		@include respond(tab-land) {
+			min-width: 47%;
+			max-width: 47%;
+			margin: 0;
+		}
+	}
 
-    article > *:not(img) {
-        margin-bottom: 2rem;
-    }
+	article > *:not(img) {
+		margin-bottom: 2rem;
+	}
 
-    &__image {
-        border: 1px solid $cp-green;
-        padding: .75rem;
-        shape-outside: element();
-    }
+	&__image {
+		border: 1px solid $cp-green;
+		padding: 0.75rem;
+		shape-outside: element();
+	}
 
-    &__image--dispensary {
-        float: left;
-        margin: 0 1.5rem .5rem 0;
-        width: clamp(12rem, 28vw, 15rem);
-    }
+	&__image--dispensary {
+		float: left;
+		margin: 0 1.5rem 0.5rem 0;
+		width: clamp(12rem, 28vw, 15rem);
+	}
 
-    &__image--counterMeds {
-        float: right;
-        margin: 0 0 .5rem 2rem;
-        width: clamp(14rem, 35vw, 22rem);
+	&__image--counterMeds {
+		float: right;
+		margin: 0 0 0.5rem 2rem;
+		width: clamp(14rem, 35vw, 22rem);
 
-        @include respond(tab-land) {
-            float: left;
-            margin: 0 2rem .5rem 0;
-        }
-    }
-
+		@include respond(tab-land) {
+			float: left;
+			margin: 0 2rem 0.5rem 0;
+		}
+	}
 }
 
 .clinicSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 3rem;
+	gap: 3rem;
 
-    &__clinicIntroAndServicesContainer {
-        @include respond(tab-land) {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
+	&__clinicIntroAndServicesContainer {
+		@include respond(tab-land) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
 
-    article {
-        max-width: 45rem;
-        margin: 0 auto 2rem;
+	article {
+		max-width: 45rem;
+		margin: 0 auto 2rem;
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        @include respond(tab-land) {
-            margin: 0 0 2rem;
-            min-width: 47%;
-            max-width: 47%;
-        }
-    }
+		@include respond(tab-land) {
+			margin: 0 0 2rem;
+			min-width: 47%;
+			max-width: 47%;
+		}
+	}
 
-    article > *:not(p) {
-        margin-bottom: 2rem;
-    }
+	article > *:not(p) {
+		margin-bottom: 2rem;
+	}
 
-    article:nth-child(2) {
-        @include respond(tab-land) {
-            margin-top: 4rem;
-        }
-    }
+	article:nth-child(2) {
+		@include respond(tab-land) {
+			margin-top: 4rem;
+		}
+	}
 
-    article:nth-child(2) > * {
-        margin-bottom: 2rem;
-    }
+	article:nth-child(2) > * {
+		margin-bottom: 2rem;
+	}
 
-    &__clearFix {
-        clear: both;
-    }
+	&__clearFix {
+		clear: both;
+	}
 
-    &__image {
-        border: 1px solid $cp-green;
-        padding: .75rem;
-        shape-outside: element();
-    }
+	&__image {
+		border: 1px solid $cp-green;
+		padding: 0.75rem;
+		shape-outside: element();
+	}
 
-    &__image--clinic {
-        float: left;
-        margin: 0 2rem .5rem 0;
-        width: clamp(14rem, 35vw, 22rem);
-    }
+	&__image--clinic {
+		float: left;
+		margin: 0 2rem 0.5rem 0;
+		width: clamp(14rem, 35vw, 22rem);
+	}
 
-    &__clearFix {
-        clear: both;
-    }
+	&__clearFix {
+		clear: both;
+	}
 
-    @media (min-width: 600px) {
-        &__clinicServicesContainer {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
+	@media (min-width: 600px) {
+		&__clinicServicesContainer {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
 
-            margin: 1.5rem auto;
-            max-width: fit-content;
-            min-height: 100px;
-        } 
+			margin: 1.5rem auto;
+			max-width: fit-content;
+			min-height: 100px;
+		}
 
-        &__item {
-           flex: 0 0 250px;
-        }    
-    }
+		&__item {
+			flex: 0 0 250px;
+		}
+	}
 
-    @include respond(tab-land) {
-        &__item {
-           flex: 0 0 185px;
-        } 
-    }
+	@include respond(tab-land) {
+		&__item {
+			flex: 0 0 185px;
+		}
+	}
 
-    @include respond(desk) {
-        &__item {
-           flex: 0 0 210px;
-        } 
-    }
+	@include respond(desk) {
+		&__item {
+			flex: 0 0 210px;
+		}
+	}
 
-    @media (min-width: 1500px) {
-        &__item {
-           flex: 0 0 220px;
-        } 
-    }
+	@media (min-width: 1500px) {
+		&__item {
+			flex: 0 0 220px;
+		}
+	}
 
-    @media (min-width: 1600px) {
-        &__item {
-           flex: 0 0 240px;
-        } 
-    }
+	@media (min-width: 1600px) {
+		&__item {
+			flex: 0 0 240px;
+		}
+	}
 
-    @include respond(big-desk) {
-        &__item {
-           flex: 0 0 280px;
-        } 
-    }    
+	@include respond(big-desk) {
+		&__item {
+			flex: 0 0 280px;
+		}
+	}
 }
 
 .importantInfoSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 3rem;
+	gap: 3rem;
 
-    &__introAndLinksContainer {
-        // margin: 0 auto;
+	&__introAndLinksContainer {
+		// margin: 0 auto;
 
-        @include respond(tab-land) {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+		@include respond(tab-land) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
 
-            gap: 1.5rem;
-        }
-    }
+			gap: 1.5rem;
+		}
+	}
 
-    article {
-        max-width: 45rem;
-        margin: 0 auto;
+	article {
+		max-width: 45rem;
+		margin: 0 auto;
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        @include respond(tab-land) {
-            min-width: 44%;
-            max-width: 44%;
-            margin: 0;
-        }
-    }
+		@include respond(tab-land) {
+			min-width: 44%;
+			max-width: 44%;
+			margin: 0;
+		}
+	}
 
-    article > *:not(img, p) {
-        margin-bottom: 2rem;
-    }
+	article > *:not(img, p) {
+		margin-bottom: 2rem;
+	}
 
-    &__image {
-        border: 1px solid $cp-green;
-        padding: .75rem;
-        shape-outside: element();
-    }
+	&__image {
+		border: 1px solid $cp-green;
+		padding: 0.75rem;
+		shape-outside: element();
+	}
 
-    &__image--importantInfo {
-        float: left;
-        margin: 0 2rem .5rem 0;
-        width: clamp(14rem, 35vw, 22rem);
+	&__image--importantInfo {
+		float: left;
+		margin: 0 2rem 0.5rem 0;
+		width: clamp(14rem, 35vw, 22rem);
 
-        @include respond(tab-land) {
-            float: left;
-            width: 60%;
-        }
-    }
+		@include respond(tab-land) {
+			float: left;
+			width: 60%;
+		}
+	}
 
-    &__clearFix {
-        clear: both;
-    }
+	&__clearFix {
+		clear: both;
+	}
 
+	&__linksList {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 
-    &__linksList {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+		gap: 1.75rem;
 
-        gap: 1.75rem;
+		margin-top: 2rem;
 
-        margin-top: 2rem;
+		& > * {
+			margin-bottom: 0.75rem;
+		}
 
-        & > * {
-            margin-bottom: .75rem;
-        }
+		// tablet portrait
+		@media (min-width: 600px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
 
-        // tablet portrait 
-        @media (min-width: 600px) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+			gap: 3rem;
+		}
 
-            gap: 3rem;
-        }
+		@include respond(tab-land) {
+			gap: 3rem;
+			margin-top: 5rem;
+			min-width: 52%;
+			max-width: 52%;
+			& > * {
+				margin-bottom: 0.15rem;
+			}
+		}
+	}
 
-        @include respond(tab-land) {
-            gap: 3rem;
-            margin-top: 5rem;
-            & > * {
-                margin-bottom: .15rem;
-            }
-            min-width: 52%;
-            max-width: 52%;
-        }        
-    }
+	&__linkItem {
+		background-color: $cp-green;
 
-    &__linkItem {
-        background-color: $cp-green;
+		width: min(45rem, 100%);
+		min-height: calc(10rem + 5vh);
 
-        width: min(45rem, 100%);
-        min-height: calc(10rem + 5vh);
+		position: relative;
+		@media (min-width: 600px) {
+			flex: 1 0 300px;
+			min-height: calc(7em + 5vh);
+		}
 
-        @media (min-width: 600px) {
-            flex: 1 0 300px;
-            min-height: calc(7em + 5vh);
-        }
+		@include respond(tab-land) {
+			flex: 1 0 180px;
+			min-height: calc(5rem + 7vh);
+		}
 
-        @include respond(tab-land) {
-            flex: 1 0 180px;
-            min-height: calc(5rem + 7vh);
-        }
+		&--pregnancy {
+			background: linear-gradient(to top, rgba($cp-white, 0.9) 25%, rgba($cp-white, 0.4) 80%), url("../img/importantInfo/ProteaPharmacyLinksPregnancy.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: $bs-dark;
+		}
 
-        position: relative;
+		&--vaccination {
+			background: linear-gradient(to top, rgba($cp-white, 0.9) 15%, rgba($cp-white, 0.4) 60%), url("../img/importantInfo/ProteaPharmacyLinksVaccination.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: $bs-dark;
+		}
 
-        &--pregnancy {
-            background: linear-gradient(to top, rgba($cp-white, .9) 25%, rgba($cp-white, .4) 80%), url('../img/importantInfo/ProteaPharmacyLinksPregnancy.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            box-shadow: $bs-dark;
-        }
+		&--children {
+			background: linear-gradient(to top, rgba($cp-white, 0.9) 25%, rgba($cp-white, 0.4) 80%), url("../img/importantInfo/ProteaPharmacyLInksChildrensHealth.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: $bs-dark;
+		}
 
-        &--vaccination {
-            background: linear-gradient(to top, rgba($cp-white, .9) 15%, rgba($cp-white, .4) 60%), url('../img/importantInfo/ProteaPharmacyLinksVaccination.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            box-shadow: $bs-dark;
-        }
-        
-        &--children {
-            background: linear-gradient(to top, rgba($cp-white, .9) 25%, rgba($cp-white, .4) 80%), url('../img/importantInfo/ProteaPharmacyLInksChildrensHealth.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            box-shadow: $bs-dark;
-        }
+		&--sport {
+			background: linear-gradient(to top, rgba($cp-white, 0.9) 25%, rgba($cp-white, 0.4) 80%), url("../img/importantInfo/ProteaPharmacyLinksDrugFreeSport.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: $bs-dark;
+		}
 
-        &--sport {
-            background: linear-gradient(to top, rgba($cp-white, .9) 25%, rgba($cp-white, .4) 80%), url('../img/importantInfo/ProteaPharmacyLinksDrugFreeSport.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            box-shadow: $bs-dark;
-        }
+		&--deptHealthLimpopo {
+			background: url("../img/importantInfo/DptHealthLimpopo.webp");
+			background-repeat: no-repeat;
+			background-size: clamp(15rem, 30vh, 25rem);
+			background-position: top;
+			box-shadow: $bs-dark;
+			position: relative;
+		}
 
-        &--deptHealthLimpopo {
-            background: url('../img/importantInfo/DptHealthLimpopo.webp');
-            background-repeat: no-repeat;
-            background-size: clamp(15rem, 30vh, 25rem);
-            background-position: top;
-            box-shadow: $bs-dark;
-            position: relative;
-        }
+		&--deptHealthSA {
+			background: url("../img/importantInfo/DeptHealthSA.webp");
+			background-repeat: no-repeat;
+			background-size: clamp(15rem, 30vh, 25rem);
+			background-position: top;
+			box-shadow: $bs-dark;
+			position: relative;
+		}
 
-        &--deptHealthSA {
-            background: url('../img/importantInfo/DeptHealthSA.webp');
-            background-repeat: no-repeat;
-            background-size: clamp(15rem, 30vh, 25rem);;
-            background-position: top;
-            box-shadow: $bs-dark;
-            position: relative;
-        }
+		&--deptHealthLimpopo,
+		&--deptHealthSA {
+			@include respond(tab-land) {
+				background-size: clamp(8rem, 18vh, 18rem);
+			}
+		}
 
-        &--deptHealthLimpopo, &--deptHealthSA {
-            @include respond(tab-land) {
-                background-size: clamp(8rem, 18vh, 18rem);
-            }
-        }
+		&--deptHealthLimpopo::after,
+		&--deptHealthSA::after {
+			content: "";
+			background-color: white;
+			width: 100%;
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -100;
+		}
+	}
 
-        &--deptHealthLimpopo::after, &--deptHealthSA::after {
-            content: "";
-            background-color: white;
-            width: 100%;
-            min-height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -100;
-        }
-    }
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		gap: 0.85rem;
 
-        gap: .85rem;
+		position: absolute;
+		bottom: 1.25rem;
+		left: 0;
+		right: 0;
+	}
 
-        position: absolute;
-        bottom: 1.25rem;
-        left: 0;
-        right: 0;
-    }
-    
-    &__icon {
-        width: 1.6rem;
-        height: 1.6rem;
-    }
+	&__icon {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
 }
 
 .contactUsSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    & > * {
-        margin-bottom: 4rem;
-    }
+	& > * {
+		margin-bottom: 4rem;
+	}
 
-    &__contactNumbersAndEmail {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+	&__contactNumbersAndEmail {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-        margin-bottom: 0 auto 4rem;
+		margin-bottom: 0 auto 4rem;
 
-        & > * {
-            margin-bottom: 3rem;
-        }
-    }
+		& > * {
+			margin-bottom: 3rem;
+		}
+	}
 
-    &__contactDetailsContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: stretch;
+	&__contactDetailsContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-            gap: 4rem;
-    }
+		gap: 4rem;
+	}
 
-    // tablet portrait
-    @media (min-width: 600px) {
-        &__contactDetailsContainer {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+	// tablet portrait
+	@media (min-width: 600px) {
+		&__contactDetailsContainer {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
 
-            gap: 3.2rem;
-        }
+			gap: 3.2rem;
+		}
 
-        &__contactDetailsSection {
-            flex: 0 0 350px;
-        }
-    }
+		&__contactDetailsSection {
+			flex: 0 0 350px;
+		}
+	}
 
-    @include respond(tab-land) {
-        &__contactDetailsContainer {
-            gap: clamp(2.5rem, 5vw, 7rem);
-            // gap: 7rem;
-        }
-        
-        &__contactDetailsSection {
-            flex: 0 0 300px;
-        }
-    }
+	@include respond(tab-land) {
+		&__contactDetailsContainer {
+			gap: clamp(2.5rem, 5vw, 7rem);
+			// gap: 7rem;
+		}
 
-    @media (min-width: 1450px) {
-        &__contactDetailsSection {
-            flex: 0 0 330px;
-        }
-    }
+		&__contactDetailsSection {
+			flex: 0 0 300px;
+		}
+	}
 
-    @media (min-width: 1750px) {
-        &__contactDetailsSection {
-            flex: 0 0 340px;
-        }
-    }
+	@media (min-width: 1450px) {
+		&__contactDetailsSection {
+			flex: 0 0 330px;
+		}
+	}
 
-    @include respond(big-desk) {
-        &__contactDetailsSection {
-            flex: 0 0 400px;
-        }
-    }
+	@media (min-width: 1750px) {
+		&__contactDetailsSection {
+			flex: 0 0 340px;
+		}
+	}
 
-    
+	@include respond(big-desk) {
+		&__contactDetailsSection {
+			flex: 0 0 400px;
+		}
+	}
 
-    &__contactDetailsPharmacy, 
-    &__contactDetailsPharmacists, 
-    &__contactDetailsClinic, 
-    &__contactDetailsAccounts, 
-    &__contactDetailsMedicalAids {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+	&__contactDetailsPharmacy,
+	&__contactDetailsPharmacists,
+	&__contactDetailsClinic,
+	&__contactDetailsAccounts,
+	&__contactDetailsMedicalAids {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-        gap: 1.5rem;
-    }
+		gap: 1.5rem;
+	}
 
-    &__pharmacist, &__staffMember {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+	&__pharmacist,
+	&__staffMember {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-        gap: .25rem;
-    }
+		gap: 0.25rem;
+	}
 
-    &__contactItem {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	&__contactItem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.3rem;
+		// tablet portrait
+		@media (min-width: 600px) {
+			justify-content: flex-start;
+		}
+	}
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            justify-content: flex-start;
-        }
+	&__contactItem a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-        gap: .3rem;
-    }
+		gap: 0.3rem;
+	}
 
-    &__contactItem a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	&__icon {
+		height: 16px;
+		width: 16px;
 
-        gap: .3rem;
-    }
+		@include respond(tab-port) {
+			height: 20px;
+			width: 20px;
+		}
+	}
 
-    &__icon {
-        height: 16px;
-        width: 16px;
+	&__contactTradingHours {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-        @include respond(tab-port) {
-            height: 20px;
-            width: 20px;
-        }
-    }
+		gap: 1rem;
 
-    &__contactTradingHours {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+		margin: 0 auto 5rem;
+		max-width: 45rem;
 
-        gap: 1rem;
+		// tablet portrait
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
+	}
 
-        margin: 0 auto 5rem;
-        max-width: 45rem;
+	&__tradingHoursDetails {
+		& > * {
+			margin-bottom: 1.5rem;
 
-        // tablet portrait
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
-    }
+			@media (min-width: 600px) {
+				margin-bottom: 2rem;
+			}
+		}
 
-    &__tradingHoursDetails {
-        & > * {
-            margin-bottom: 1.5rem;
+		@media (min-width: 600px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
 
-            @media (min-width:600px) {
-                margin-bottom: 2rem;
-            }
-        }
+			& > * {
+				margin-right: 4rem;
+			}
+		}
 
-        @media (min-width: 600px) {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+		@media (min-width: 600px) {
+		}
+	}
 
-            & > * {
-                margin-right: 4rem;            
-            }
-        }
+	&__mapAndContactformContainer {
+		@include respond(tab-land) {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
 
-        @media (min-width: 600px) {
-        
-        }
-    }
+			gap: 5rem;
+		}
+	}
 
-    &__mapAndContactformContainer {
+	&__contactMap {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-        @include respond(tab-land) {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
+		width: min(100%, 45rem);
+		margin: 0 auto;
 
-            gap: 5rem
-        }
-    }
+		& > * {
+			margin-bottom: 3rem;
+		}
 
-    &__contactMap {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        
-        width: min(100%, 45rem);
-        margin: 0 auto;
+		a {
+			width: fit-content;
+			margin: 0 auto 8rem;
+		}
 
-        & > * {
-            margin-bottom: 3rem;
-        }
+		@include respond(tab-port) {
+			margin-bottom: 2rem;
+			width: 100%;
+		}
 
-        a {
-            width: fit-content;
-            margin: 0 auto 8rem;
-        }
+		@include respond(tab-land) {
+			max-width: 45%;
+			margin: 0;
+		}
+	}
 
-        @include respond(tab-port) {
-            margin-bottom: 2rem;
-            width: 100%;
-        }
-    
-        @include respond(tab-land) {
-            max-width: 45%;
-            margin: 0;
-        }
-    }
+	&__googleMapsContainer {
+		border: 1px solid $cp-green;
+		box-shadow: $bs-dark;
 
-    &__googleMapsContainer {
-        border: 1px solid $cp-green;
-        box-shadow: $bs-dark;
+		width: 100%;
+		margin: 0 auto 4rem;
+	}
 
-        width: 100%;
-        margin: 0 auto 4rem;
+	&__googleMaps {
+		width: 100%;
+		height: 45vh;
+	}
 
-    }
+	&__gpsAddress {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 
-    &__googleMaps {
-        width: 100%;
-        height: 45vh;
-     
-    }
+		gap: 1rem;
 
-    &__gpsAddress {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+		margin: 0 auto 5rem;
+		max-width: 45rem;
 
-        gap: 1rem;
+		@media (min-width: 600px) {
+			min-width: 100%;
+		}
 
-        margin: 0 auto 5rem;
-        max-width: 45rem;
+		@include respond(tab-land) {
+			min-width: 45%;
+		}
+	}
 
-        
-        @media (min-width: 600px) {
-            min-width: 100%;
-        }
+	&__gpsAddressDetails {
+		& > * {
+			margin-bottom: 1.5rem;
 
-        @include respond(tab-land) {
-            min-width: 45%;
-        }
-    }
+			@media (min-width: 600px) {
+				margin-bottom: 2rem;
+			}
+		}
 
-    &__gpsAddressDetails {
-        & > * {
-            margin-bottom: 1.5rem;
+		@media (min-width: 600px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
 
-            @media (min-width:600px) {
-                margin-bottom: 2rem;
-            }
-        }
+			& > * {
+				margin-right: 4rem;
+			}
+		}
 
-        @media (min-width: 600px) {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+		@media (min-width: 600px) {
+		}
+	}
 
-            & > * {
-                margin-right: 4rem;            
-            }
-        }
+	.paragraph--gpsAddressParDetails {
+		cursor: pointer;
+	}
 
-        @media (min-width: 600px) {
-        
-        }
-    }
-
-    .paragraph--gpsAddressParDetails {
-        cursor: pointer;
-    }
-
-    .paragraph--gpsAddressIntro {
-        @include respond(tab-land) {
-            margin-top: 1.15rem;
-        }
-    }
-
+	.paragraph--gpsAddressIntro {
+		@include respond(tab-land) {
+			margin-top: 1.15rem;
+		}
+	}
 }

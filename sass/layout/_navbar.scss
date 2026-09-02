@@ -1,36 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .navbarSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    background-color: $cp-darkBlue;
+	background-color: $cp-darkBlue;
 
-    padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 
-    visibility: hidden;
-    opacity: 0;
+	visibility: hidden;
+	opacity: 0;
 
-    position: fixed;
-    top: 0;
-    left: 0; 
-    right: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
-    z-index: 1000;
+	z-index: 1000;
 
-    transition: all .6s;
+	transition: all 0.6s;
 
-    @include respond(tab-port) {
-        padding: .5rem 4rem;        
-    }
+	@include respond(tab-port) {
+		padding: 0.5rem 4rem;
+	}
 
-    @media (min-width: 2000px) {
-        margin: 0 auto;
-        max-width: 2000px;
-    }
-
+	@media (min-width: 2000px) {
+		margin: 0 auto;
+		max-width: 2000px;
+	}
 }
 
 .navbar--background {
-    background-color: $cp-darkBlue;
-    border-bottom: 1px solid $cp-green;
+	background-color: $cp-darkBlue;
+	border-bottom: 1px solid $cp-green;
 }
