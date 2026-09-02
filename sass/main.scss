@@ -1,44 +1,5 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
-
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-
-@import "components/button";
-@import "components/cardpopup";
-@import "components/cardPortfolio";
-@import "components/cardSkills";
-@import "components/composition";
-@import "components/contactForm";
-@import "components/contactIcons";
-@import "components/filler";
-@import "components/headings";
-@import "components/heroSection";
-@import "components/imageSlider";
-@import "components/linkDiv";
-@import "components/logo";
-@import "components/minicard";
-@import "components/navigation";
-@import "components/notification";
-@import "components/paragraph";
-@import "components/pharmacyDepartment";
-@import "components/popup";
-@import "components/portfolio-card";
-@import "components/portfolio-image";
-@import "components/promotion";
-@import "components/openAndCloseIcons";
-@import "components/socialmedia";
-@import "components/teamMemberCard";
-@import "components/techStack";
-@import "components/termsAndConditions";
-@import "components/tools";
-
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
-@import "layout/navbar";
-@import "layout/sidebar";
-
-@import "pages/home";
+@use "abstracts";
+@use "base";
+@use "components";
+@use "layout";
+@use "pages/home";
