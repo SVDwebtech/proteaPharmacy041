@@ -1,46 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .cardPortfolio {
-    background-color: $cp-darkBlue;
-    border-radius: $br-sm;
+	background-color: $cp-darkBlue;
+	border-radius: $br-sm;
 
-    max-width: 450px;
-    padding: 2.5rem;
-    margin: 0 auto 4rem;
-    
-    &__figure {
-        margin-bottom: 1.5rem;
-    }
+	max-width: 450px;
+	padding: 2.5rem;
+	margin: 0 auto 4rem;
 
-    &__img {
-        border: 3px solid $cp-white;
-        border-radius: $br-sm;
-        width: 100%;    
-    }
-        
-    &__headingH3Container {
-         margin-bottom: 1rem;
-        
-    }
+	&__figure {
+		margin-bottom: 1.5rem;
+	}
 
-    &__paragraph {
-        margin-bottom: 2rem;
-    }
-    
-    &__cta {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        @media (min-width: 485px) {
-            flex-direction: row;
-            gap: 0;
-        }
-        justify-content: center;
-        align-items: center;
+	&__img {
+		border: 3px solid $cp-white;
+		border-radius: $br-sm;
+		width: 100%;
+	}
 
-        width: 100%;           
-    }
+	&__headingH3Container {
+		margin-bottom: 1rem;
+	}
+
+	&__paragraph {
+		margin-bottom: 2rem;
+	}
+
+	&__cta {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		@media (min-width: 485px) {
+			flex-direction: row;
+			gap: 0;
+		}
+	}
 }
 
-
 .figure__img {
-    width: 100%;
+	width: 100%;
 }

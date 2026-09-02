@@ -1,14 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .pharmacyDepartment {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
 
-    gap: 1.25rem;
+	gap: 1.25rem;
 
-    &__hr {
-        border: none;
-        height: 1px;
-        background: linear-gradient(to right, transparent, rgba($cp-green, .4) 15%, rgba($cp-green, 1) 40%, $cp-darkGreen, rgba($cp-green, 1) 60%, rgba($cp-green, .4) 85%, transparent);
-    }
+	&__hr {
+		border: none;
+		height: 1px;
+		background: linear-gradient(to right, transparent, rgba($cp-green, 0.4) 15%, rgba($cp-green, 1) 40%, $cp-darkGreen, rgba($cp-green, 1) 60%, rgba($cp-green, 0.4) 85%, transparent);
+	}
 }

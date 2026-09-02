@@ -1,29 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .cardSkills {
-    background-color: $cp-white;
+	background-color: $cp-white;
 
-    max-width: 450px;
-    padding: 2.5rem;
-    margin: 0 auto 4rem;
-    
-    &__figure {
-        margin-bottom: 3rem;
-    }
+	max-width: 450px;
+	padding: 2.5rem;
+	margin: 0 auto 4rem;
 
-    &__img {
-        display: block;
-        width: clamp(15rem, 35vw, 30rem); 
-        margin: 0 auto;   
-    }
-        
-    &__headingH3Container {
-        // margin-bottom: 12rem;
-    }
+	&__figure {
+		margin-bottom: 3rem;
+	}
 
-    &__headingH3 {
-         margin-bottom: 1rem;
-    }
+	&__img {
+		display: block;
+		width: clamp(15rem, 35vw, 30rem);
+		margin: 0 auto;
+	}
 
-    &__paragraph {
-        // margin-bottom: 2rem;
-    }
+	&__headingH3Container {
+		// margin-bottom: 12rem;
+	}
+
+	&__headingH3 {
+		margin-bottom: 1rem;
+	}
+
+	&__paragraph {
+		// margin-bottom: 2rem;
+	}
 }

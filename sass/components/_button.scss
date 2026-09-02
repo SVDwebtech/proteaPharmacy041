@@ -1,95 +1,98 @@
-.btn {  
-    background-color: $cp-darkBlue;
-    border-top: 2px solid $cp-darkGrey;
-    border-left: 2px solid $cp-grey;
-    border-bottom: 2px solid $cp-lightGrey;
-    border-right: 2px solid $cp-light;
-    border-radius: .45rem;
-    box-shadow: $bs-btn;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
-    width: fit-content;
+.btn {
+	background-color: $cp-darkBlue;
+	border-top: 2px solid $cp-darkGrey;
+	border-left: 2px solid $cp-grey;
+	border-bottom: 2px solid $cp-lightGrey;
+	border-right: 2px solid $cp-light;
+	border-radius: 0.45rem;
+	box-shadow: $bs-btn;
 
-    padding: .25em 1em;
-    margin: 0 auto;
+	width: fit-content;
 
-    cursor: pointer;
-    backface-visibility: hidden;
-    transition: all .2s;
+	padding: 0.25em 1em;
+	margin: 0 auto;
 
-    &:link, &:visited {
-        text-decoration: none;
-        transform: translateY(0px);
-    }
+	cursor: pointer;
+	backface-visibility: hidden;
+	transition: all 0.2s;
 
-    .photoCollage__cardPhoto:hover & {
-        transform: translateY(-2px);
-    }
+	&:link,
+	&:visited {
+		text-decoration: none;
+		transform: translateY(0px);
+	}
 
-    &:active {
-        border-bottom: 2px solid $cp-grey;
-        border-right: 2px solid $cp-grey;
-        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .7);
-        transform: translateY(-1px);
-    }
+	.photoCollage__cardPhoto:hover & {
+		transform: translateY(-2px);
+	}
 
-    &--primary-blue {
-        background-color: rgba($cp-darkBlue, .85);
-    }
+	&:active {
+		border-bottom: 2px solid $cp-grey;
+		border-right: 2px solid $cp-grey;
+		box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.7);
+		transform: translateY(-1px);
+	}
 
-    &--primary-white {
-        background-color: rgba($cp-white, .85);
-    }
+	&--primary-blue {
+		background-color: rgba($cp-darkBlue, 0.85);
+	}
 
-    &--getDirections {
-        
-    }
+	&--primary-white {
+		background-color: rgba($cp-white, 0.85);
+	}
 
-    &--cardPhotoBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	&--getDirections {
+	}
 
-        gap: .5rem;
+	&--cardPhotoBtn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
+		gap: 0.5rem;
 
-        width: fit-content;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
 
-        padding: 0 0 .25rem;
-        margin: 0 auto 0 0;
+		width: fit-content;
 
-        cursor: pointer;
-        backface-visibility: hidden;
-        transition: all .2s;
-    }
+		padding: 0 0 0.25rem;
+		margin: 0 auto 0 0;
 
-    &--cardPhoto:hover &__cardPhotoBtn {
-        box-shadow: none;
-    }
+		cursor: pointer;
+		backface-visibility: hidden;
+		transition: all 0.2s;
+	}
 
-    &--cardPhotoBackBtn {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+	&--cardPhoto:hover &__cardPhotoBtn {
+		box-shadow: none;
+	}
 
-        gap: .25rem;
+	&--cardPhotoBackBtn {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
+		gap: 0.25rem;
 
-        width: fit-content;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
 
-        padding: 0 0 .25rem;
-        margin: 0 auto 0 0;
+		width: fit-content;
 
-        cursor: pointer;
-        backface-visibility: hidden;
-        transition: all .2s;
-    }
+		padding: 0 0 0.25rem;
+		margin: 0 auto 0 0;
+
+		cursor: pointer;
+		backface-visibility: hidden;
+		transition: all 0.2s;
+	}
 }

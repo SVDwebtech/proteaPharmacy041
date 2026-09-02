@@ -1,299 +1,264 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .primaryHeading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-    background-color: $cp-darkBlue;
+	background-color: $cp-darkBlue;
 
-    padding: clamp(1rem, 3vh, 2.5rem) 1rem;
-    gap: clamp(1.5rem, 1vh, 2rem);    
+	padding: clamp(1rem, 3vh, 2.5rem) 1rem;
+	gap: clamp(1.5rem, 1vh, 2rem);
 
-    &__headAndBylineContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-    }
+	&__headAndBylineContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
-    &__headlineImage {
-        // width: clamp(calc(4.4rem + 6vw), 12vh, calc(8.4rem + 6vw));
-        order: 2;
-        width: 22rem;
-        margin-bottom: 1rem;
-    }
+	&__headlineImage {
+		// width: clamp(calc(4.4rem + 6vw), 12vh, calc(8.4rem + 6vw));
+		order: 2;
+		width: 22rem;
+		margin-bottom: 1rem;
+	}
 
-    &__headline {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+	&__headline {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-        gap: .5rem;    
-        margin-left: 0;
-    }
+		gap: 0.5rem;
+		margin-left: 0;
+	}
 
-    &__hr {
-        border: none;
-        width: 100%;
-        height: 1px;
+	&__hr {
+		border: none;
+		width: 100%;
+		height: 1px;
 
-        border-bottom: 1px solid $cp-green;
-        
-        margin: .25rem 0;
-    }
+		border-bottom: 1px solid $cp-green;
 
-    &__headlineText {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		margin: 0.25rem 0;
+	}
 
-        gap: 1rem;
-    }
+	&__headlineText {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    &__paragraph {
-        max-width: 45rem;
+		gap: 1rem;
+	}
 
-        @include respond(tab-port) {
-            max-width: 85%;
-        }
-    }
+	&__paragraph {
+		max-width: 45rem;
+
+		@include respond(tab-port) {
+			max-width: 85%;
+		}
+	}
 }
 
 .headingH2Container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	// tablet portrait
+	@media (min-width: 600px) {
+		align-items: flex-start;
+	}
+	&__headingH2 {
+		width: fit-content;
+		position: relative;
+	}
 
-    // tablet portrait
-    @media (min-width: 600px) {
-        align-items:flex-start;
-    }
-     
-    position: relative;
+	&__hr {
+		border: 0;
+		width: 100%;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 2.5%, rgba($cp-darkBlue, 0.4) 20%, rgba($cp-darkBlue, 0.75) 50%, rgba($cp-darkBlue, 0.4) 80%, rgba(0, 0, 0, 0) 97.5%);
+		margin: 0.35rem 0;
 
-    &__headingH2 {
+		@include respond(tab-port) {
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 2.5%, rgba($cp-darkBlue, 0.9) 20%, rgba($cp-darkBlue, 0.75) 50%, rgba($cp-darkBlue, 0.4) 80%, rgba(0, 0, 0, 0) 97.5%);
+			width: 70%;
+		}
+	}
 
-        width: fit-content;
-        position: relative;
-    }
+	&__subheadingH2 {
+	}
 
-    &__hr {
-        border: 0;
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(to right,rgba(0,0,0,0) 2.5%, rgba($cp-darkBlue, 0.4) 20%, rgba($cp-darkBlue, 0.75) 50%, rgba($cp-darkBlue, 0.4) 80%, rgba(0,0,0,0) 97.5%);
-        margin: .35rem 0;
+	// &__headingH2--about::after {
+	//     content: "";
+	//     width: 10rem;
+	//     height: 10rem;
 
-        @include respond(tab-port) {
-           background-image: linear-gradient(to right,rgba(0,0,0, 1) 2.5%, rgba($cp-darkBlue, 0.9) 20%, rgba($cp-darkBlue, 0.75) 50%, rgba($cp-darkBlue, 0.4) 80%, rgba(0,0,0,0) 97.5%); 
-           width: 70%;
-        }
-    }
+	//     background-color: red;
 
-    &__subheadingH2 {
-    }
+	//     position: absolute;
+	//     top: 0;
+	//     left: 0;
 
+	//     z-index: 100;
+	// }
+	&__headingH2--about::after {
+		content: "";
 
-    // &__headingH2--about::after {
-    //     content: "";
-    //     width: 10rem;
-    //     height: 10rem;
+		background: url("../img/headingH2Icons/PeopleIcon.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-    //     background-color: red;
+		width: 10rem;
+		height: 10rem;
 
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
+		position: absolute;
+		top: -120%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -100;
+		@media (min-width: 400px) {
+			top: -80%;
+		}
+		// tablet portrait
+		@media (min-width: 600px) {
+			left: 8rem;
+		}
+	}
 
-    //     z-index: 100;
-    // }
-    &__headingH2--about::after {
-        content: "";
+	&__headingH2--dispensary::after {
+		content: "";
 
-        background: url('../img/headingH2Icons/PeopleIcon.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+		background: url("../img/headingH2Icons/PillIcon.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
+		width: 11rem;
+		height: 11rem;
 
-        width: 10rem;
-        height: 10rem;
+		position: absolute;
+		top: -120%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -100;
 
-        position: absolute;
-        top: -120%;
-        left: 50%;
+		@media (min-width: 420px) {
+			top: -90%;
+		}
+		// tablet portrait
+		@media (min-width: 600px) {
+			left: 8rem;
+		}
+	}
 
-        // tablet portrait 
-        @media (min-width: 600px) {
-            left: 8rem;
-        }
+	&__headingH2--clinic::after {
+		content: "";
 
-        transform: translateX(-50%);
+		background: url("../img/headingH2Icons/StethoscopeIcon.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-        z-index: -100;
+		width: 11rem;
+		height: 11rem;
 
-        @media (min-width: 400px) {
-            top: -80%;
-        }
-    }
+		position: absolute;
+		top: -120%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -100;
 
-    &__headingH2--dispensary::after {
-        content: "";
+		@media (min-width: 420px) {
+			top: -90%;
+		}
+		// tablet portrait
+		@media (min-width: 600px) {
+			left: 8rem;
+		}
+	}
 
-        background: url('../img/headingH2Icons/PillIcon.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+	&__headingH2--info::after {
+		content: "";
 
+		background: url("../img/headingH2Icons/LinkIcon.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-        width: 11rem;
-        height: 11rem;
+		width: 11rem;
+		height: 11rem;
 
-        position: absolute;
-        top: -120%;
-        left: 50%;
+		position: absolute;
+		top: -120%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -100;
 
-        // tablet portrait 
-        @media (min-width: 600px) {
-            left: 8rem;
-        }
+		@media (min-width: 420px) {
+			top: -90%;
+		}
+		// tablet portrait
+		@media (min-width: 600px) {
+			left: 8rem;
+		}
+	}
 
-        transform: translateX(-50%);
+	&__headingH2--contact::after {
+		content: "";
 
-        z-index: -100;
+		background: url("../img/headingH2Icons/PhoneIcon.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-        @media (min-width: 420px) {
-            top: -90%;
-        }
-    }  
+		width: 11rem;
+		height: 11rem;
 
-    &__headingH2--clinic::after {
-        content: "";
+		position: absolute;
+		top: -120%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -100;
 
-        background: url('../img/headingH2Icons/StethoscopeIcon.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-
-        width: 11rem;
-        height: 11rem;
-
-        position: absolute;
-        top: -120%;
-        left: 50%;
-
-        // tablet portrait 
-        @media (min-width: 600px) {
-            left: 8rem;
-        }
-
-        transform: translateX(-50%);
-
-        z-index: -100;
-
-        @media (min-width: 420px) {
-            top: -90%;
-        }
-    }
-
-    &__headingH2--info::after {
-        content: "";
-
-        background: url('../img/headingH2Icons/LinkIcon.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-
-        width: 11rem;
-        height: 11rem;
-
-        position: absolute;
-        top: -120%;
-        left: 50%;
-
-        // tablet portrait 
-        @media (min-width: 600px) {
-            left: 8rem;
-        }
-
-        transform: translateX(-50%);
-
-        z-index: -100;
-
-        @media (min-width: 420px) {
-            top: -90%;
-        }
-    }
-
-    &__headingH2--contact::after {
-        content: "";
-
-        background: url('../img/headingH2Icons/PhoneIcon.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-
-        width: 11rem;
-        height: 11rem;
-
-        position: absolute;
-        top: -120%;
-        left: 50%;
-
-        // tablet portrait 
-        @media (min-width: 600px) {
-            left: 8rem;
-        }
-
-        transform: translateX(-50%);
-
-        z-index: -100;
-
-        @media (min-width: 420px) {
-            top: -90%;
-        }
-    }    
+		@media (min-width: 420px) {
+			top: -90%;
+		}
+		// tablet portrait
+		@media (min-width: 600px) {
+			left: 8rem;
+		}
+	}
 }
 
 .headingH3Container {
-    position: relative;
+	position: relative;
 
-    &__br--counterMeds {
-        @include respond(tab-port) {
-            display: none;
-        }
-    }
+	&__br--counterMeds {
+		@include respond(tab-port) {
+			display: none;
+		}
+	}
 }
 
 .headingSlideContainer {
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    // tablet portrait
-    @media (min-width: 600px) {
-        justify-content: flex-start;
-    }
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
 
-    align-items: center;
+	margin-bottom: 0.5rem;
 
-    gap: .5rem;
-
-
-
-    margin-bottom: .5rem;
-	
-	&__headingH4 {
-		
-	}
-
-	&__headingH5 {
-		
+	// tablet portrait
+	@media (min-width: 600px) {
+		justify-content: flex-start;
 	}
 }
