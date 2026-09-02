@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 // basic reset
 *,
 *::after,
@@ -9,7 +11,7 @@
 
 html {
 	// smoothes automatic scroll when you click on a navlink
-	scroll-behavior:smooth;
+	scroll-behavior: smooth;
 	/* 	1rem is equal to 10px */
 	/* 	because 10px / 10 is equal to 1rem */
 	/* 	therefore 30px is equal to 3rem */
@@ -18,23 +20,23 @@ html {
 	font-size: 62.5%; // 1rem = 10px
 
 	@include respond(tab-port) {
-	/* 	12px / 16px *100 = 75% */
+		/* 	12px / 16px *100 = 75% */
 		font-size: 75%; // 1.4rem = 16.8px
 	}
 
 	@include respond(tab-land) {
-	/* 	13px / 16px *100 = 81.25% */
-		// font-size: 81.25%; // 1.4rem = 18.2px 
+		/* 	13px / 16px *100 = 81.25% */
+		// font-size: 81.25%; // 1.4rem = 18.2px
 		font-size: 62.5%; // 1rem = 10px
 	}
 
 	@include respond(desk) {
-	/* 	15px / 16px *100 = 93.75% */
+		/* 	15px / 16px *100 = 93.75% */
 		font-size: 65%; // 1.4rem = 21px
 	}
-	
+
 	@include respond(big-desk) {
-	/* 	18px / 16px *100 = 112.5% */
+		/* 	18px / 16px *100 = 112.5% */
 		font-size: 70%; // 1.4rem = 25.2px
 	}
 
@@ -59,11 +61,10 @@ body {
 	}
 }
 
-
-ol, ul{
+ol,
+ul {
 	list-style: none;
 }
-
 
 a {
 	text-decoration: none;
